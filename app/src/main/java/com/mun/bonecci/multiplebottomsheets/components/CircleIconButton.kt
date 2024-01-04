@@ -19,12 +19,23 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.mun.bonecci.multiplebottomsheets.utils.Constants
-import com.mun.bonecci.multiplebottomsheets.utils.IconResource
 import com.mun.bonecci.multiplebottomsheets.R
 import com.mun.bonecci.multiplebottomsheets.ui.theme.dimen_5dp
+import com.mun.bonecci.multiplebottomsheets.utils.Constants
+import com.mun.bonecci.multiplebottomsheets.utils.IconResource
 
 
+/**
+ * A circular icon button composed of an [IconButton] with a circular background and an icon in the center.
+ *
+ * @param modifier Custom [Modifier] for styling and positioning the button.
+ * @param layoutId Identifier for the button's layout in a ConstraintLayout.
+ * @param icon The [Painter] representing the icon to be displayed on the button.
+ * @param iconColor Color of the icon.
+ * @param backGroundColor Background color of the circular button.
+ * @param contentDescription The content description for accessibility.
+ * @param onClick Callback lambda invoked when the button is clicked.
+ */
 @Composable
 fun CircleIconButton(
     modifier: Modifier = Modifier,
@@ -37,7 +48,9 @@ fun CircleIconButton(
 ) {
     IconButton(
         modifier = modifier.layoutId(layoutId),
-        onClick = { onClick.invoke() }) {
+        onClick = { onClick.invoke() }
+    ) {
+        // Circular button with centered icon
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -47,6 +60,7 @@ fun CircleIconButton(
                     shape = CircleShape
                 )
         ) {
+            // Icon in the center of the circular button
             Icon(
                 icon,
                 contentDescription = contentDescription,
