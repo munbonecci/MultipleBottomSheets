@@ -1,7 +1,7 @@
 <h1 align="center">MultipleBottomSheets</h1> 
 
 <p align="center">
-This app was created to learn more about Android compose using bottom sheets
+This app was created to learn more about Android compose using bottom sheets.
 </p>
 
 ## Installation
