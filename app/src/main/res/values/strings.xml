@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MultipleBottomSheets</string>
+    <string name="comments_label">Comments</string>
+    <string name="share_label">Share</string>
+    <string name="circle_icon_button">"Circle icon button"</string>
+</resources>
